@@ -5,6 +5,26 @@
     {
       "src": "/content/*",
       "use": "@vercel/static"
+    },
+    {
+      "src": "/api/*.js",
+      "use": "@vercel/node",
+    },
+    {
+      "src": "/api/*.py",
+      "use": "@vercel/python",
+    },
+    {
+      "src": "/api/*.html",
+      "use": "@vercel/static",
+    },
+    {
+      "src": "/api/*.txt",
+      "use": "@vercel/static",
+    },
+    {
+      "src": "/api/*.json",
+      "use": "@vercel/static",
     }
   ],
   "routes": [
@@ -13,8 +33,20 @@
       "dest": "/content/index.html"
     },
     {
-      "src": "/([^.]+)\\.(html|css|js)",
+      "src": "/api/([^.]+)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/([^.]+)\\.(html|css|ts|tsx|text|json)",
       "dest": "/content/$1.$2"
+    },
+    {
+      "src": "/([^.]+)\\.(png|jpg|svg|gif)",
+      "dest": "/images/$1.$2"
+    },
+    {
+      "src": "/([^.]+)\\.(zip|type|sb|sb2|sb3|scratch|pmp|dbp)",
+      "dest": "/archives/$1.$2"
     }
   ]
 }
