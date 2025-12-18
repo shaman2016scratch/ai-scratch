@@ -1,5 +1,5 @@
 {
-  "code": "503",
+  "code": 503,
   "error": "The server is disabled.",
   "disable": true
 }
