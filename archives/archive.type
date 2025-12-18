@@ -1,1 +1,10 @@
-{}
+{
+  "text.txt": {
+    "type": "txt",
+    "sod": "txt file in base .type"
+  },
+  "code.ts": {
+    "type": "ts",
+    "sod": "console.log('hi')"
+  }
+}
