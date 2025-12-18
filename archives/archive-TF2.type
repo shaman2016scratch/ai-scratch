@@ -1,1 +1,18 @@
-{}
+{
+  "text.txt": {
+    "type": "txt",
+    "sod": "txt file in .type TF2",
+    "metadata": {
+      "type": "txt",
+      "name": "text"
+    }
+  },
+  "code.ts": {
+    "type": "ts",
+    "code": "console.log('hi')",
+    "metadata": {
+      "type": "TypeScript",
+      "name": "code"
+    }
+  }
+}
