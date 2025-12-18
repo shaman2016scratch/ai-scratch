@@ -1,7 +1,7 @@
 {
   "name": "ai-scratch",
   "version": "0.0.1",
-  "description": "",
+  "description": "An experiment where a neural network will make a scratch modification based on a code written by a human.",
   "author": "SHAMAN2016",
   "license": "MIT",
   "dependencies": {
