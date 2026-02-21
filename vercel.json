@@ -7,24 +7,12 @@
       "use": "@vercel/static"
     },
     {
-      "src": "/api/*.js",
+      "src": "/content/*/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "/api/*.mjs",
       "use": "@vercel/node"
-    },
-    {
-      "src": "/api/*.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "/api/*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "/api/*.txt",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "/api/*.json",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -34,10 +22,14 @@
     },
     {
       "src": "/api/([^.]+)",
-      "dest": "/api/$1"
+      "dest": "/api/$1.mjs"
     },
     {
-      "src": "/([^.]+)\\.(html|css|ts|tsx|text|json)",
+      "src": "/api/([^.]+)/([^.]+)",
+      "dest": "/api/$1/$2.mjs"
+    },
+    {
+      "src": "/([^.]+)\\.(html|css|js|txt|json)",
       "dest": "/content/$1.$2"
     },
     {
@@ -45,7 +37,7 @@
       "dest": "/images/$1.$2"
     },
     {
-      "src": "/([^.]+)\\.(zip|type|sb|sb2|sb3|scratch|pmp|dbp)",
+      "src": "/([^.]+)\\.(zip|type|sb3|pmp|dbp)",
       "dest": "/archives/$1.$2"
     }
   ]
