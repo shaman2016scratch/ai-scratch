@@ -29,16 +29,20 @@
       "dest": "/api/$1/$2.mjs"
     },
     {
-      "src": "/([^.]+)\\.(html|css|js|txt|json)",
+      "src": "/([^.]+)\.(html|css|js|txt|json)",
       "dest": "/content/$1.$2"
     },
     {
-      "src": "/([^.]+)\\.(png|jpg|svg|gif)",
+      "src": "/([^.]+)\.(png|jpg|svg|gif)",
       "dest": "/images/$1.$2"
     },
     {
-      "src": "/([^.]+)\\.(zip|type|sb3|pmp|dbp)",
+      "src": "/([^.]+)\.(zip|type|sb3|pmp|dbp)",
       "dest": "/archives/$1.$2"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "/content/$1"
     }
   ]
 }
